@@ -1,16 +1,26 @@
 # vitasprint
+# Step Counter Fitness App
 
-A new Flutter project.
+<p align="center">
+  <img src="https://img.freepik.com/free-vector/flat-woman-using-smartphone-with-pedometer-counting-steps_88138-943.jpg" alt="App Demo" width="300">
+</p>
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+The Step Counter Fitness App is a mobile application built with Flutter that helps users track their daily steps and maintain a healthy lifestyle. Whether you're an avid fitness enthusiast or simply looking to stay active, this app makes it easy to monitor your daily physical activity.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Prerequisites
+
+- Make sure you have Flutter and Dart installed on your development machine.
+
+### Steps
+
+1. Clone this repository to your local machine:
+
+   ```shell
+   git clone https://github.com/syedtazyeen/VitaSprint.git
+
