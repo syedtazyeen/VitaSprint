@@ -1,4 +1,4 @@
-#Fri Sep 01 15:44:01 IST 2023
-base.0=/Users/syedtazyeen/Github/VitaSprint/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Wed Sep 06 13:18:50 IST 2023
+base.0=/Users/syedtazyeen/Documents/VitaSprint/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

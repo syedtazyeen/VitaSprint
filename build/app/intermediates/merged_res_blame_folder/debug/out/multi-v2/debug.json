@@ -87,7 +87,7 @@
                     }
                 },
                 {
-                    "source": "/Users/syedtazyeen/Github/VitaSprint/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -516,7 +516,7 @@
             "outputFile": "com.yiverse.vitasprint.app-merged_res-11:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/syedtazyeen/Github/VitaSprint/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
