@@ -35,6 +35,12 @@ dependencies:
   provider:
   percent_indicator:
   pedometer:
+  http:
+  hive:
+  hive_flutter:
+  hive_generator:
+  path_provider:
+  build_runner:
 
 
   # The following adds the Cupertino Icons font to your application.
