@@ -13,7 +13,9 @@ The Step Counter Fitness App is a mobile application built with Flutter that hel
 - Healthy recipes.
 - Physique customisation.
 
-### Installation
+### Install App
+
+<p><a style="text-decoration: none; color: #fff;" href="https://vitasprint.netlify.app" >Download</a></p>
 
 ### Prerequisites
 
