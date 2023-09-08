@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vita_sprint/constants/app_colors.dart';
 
 class ActivityItem extends StatelessWidget {
   String title, value;

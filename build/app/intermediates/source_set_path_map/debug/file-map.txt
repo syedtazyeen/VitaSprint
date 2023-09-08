@@ -10,3 +10,5 @@ com.yiverse.vitasprint.app-rs-8 /Users/syedtazyeen/Documents/VitaSprint/build/ap
 com.yiverse.vitasprint.app-mergeDebugResources-9 /Users/syedtazyeen/Documents/VitaSprint/build/app/intermediates/incremental/debug/mergeDebugResources/merged.dir
 com.yiverse.vitasprint.app-mergeDebugResources-10 /Users/syedtazyeen/Documents/VitaSprint/build/app/intermediates/incremental/debug/mergeDebugResources/stripped.dir
 com.yiverse.vitasprint.app-merged_res-11 /Users/syedtazyeen/Documents/VitaSprint/build/app/intermediates/merged_res/debug
+com.yiverse.vitasprint.app-packaged_res-12 /Users/syedtazyeen/Documents/VitaSprint/build/path_provider_android/intermediates/packaged_res/debug
+com.yiverse.vitasprint.app-packaged_res-13 /Users/syedtazyeen/Documents/VitaSprint/build/pedometer/intermediates/packaged_res/debug

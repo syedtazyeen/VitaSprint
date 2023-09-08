@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vita_sprint/screens/home/widgets/grid_card.dart';
+import 'package:vita_sprint/utils/steps_helper.dart';
 import '../../../blocs/steps/steps_bloc.dart';
 import '../../../constants/app_colors.dart';
 import '../../../utils/step_counter.dart';
@@ -43,13 +44,31 @@ class ActivitiesView extends StatelessWidget {
   final state;
   const ActivitiesView({super.key, required this.state});
 
+
+  double calculatePercent(double s, double t) {
+    //print("percent - ${s / t}");
+    if (s == null || t == null) return 0;
+    if (s / t <= 1 && s / t >= 0) {
+      return s / t;
+    } else if (s / t > 1) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
           decoration: const BoxDecoration(
-            color: AppColors.appBlue,
+            //color: AppColors.appBlue,
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Colors.white,  AppColors.appBlue], // Define your gradient colors
+            ),
           ),
           height: 420,
           padding: const EdgeInsets.only(top: 64, bottom: 16),
@@ -64,29 +83,29 @@ class ActivitiesView extends StatelessWidget {
                   subtitle: "Steps",
                   radius: 70.0,
                   width: 10.0,
-                  percent: 0.7,
-                  progressColor: AppColors.progressColor1,
+                  percent: calculatePercent((state.currentSteps * 0.067 * 0.01), (7000 * 0.067 * 0.01)),
+                  progressColor: AppColors.appGreeneDark,
                 ),
                 const Padding(padding: EdgeInsets.all(12)),
                 Row(
                   children: [
                     ActivityItem(
                       title: "kCal Burnt",
-                      value: "324.46",
+                      value: ((StepsHelper().getCaloriesFromSteps(state.currentSteps)/1000).toStringAsFixed(2)),
                       icon: Icons.whatshot,
                       iconColor: Colors.deepOrange,
                       iconBg: Colors.white38,
                     ),
                     ActivityItem(
                       title: "Distance",
-                      value: "32.46",
+                      value: "${(StepsHelper().getDistanceFromSteps(state.currentSteps)/1000).toStringAsFixed(2)} km",
                       icon: Icons.directions,
                       iconColor: Colors.brown,
                       iconBg: Colors.white38,
                     ),
                     ActivityItem(
                       title: "Time",
-                      value: "45 min",
+                      value: "--",
                       icon: Icons.alarm_on,
                       iconColor: Colors.teal,
                       iconBg: Colors.white38,

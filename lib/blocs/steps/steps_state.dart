@@ -7,5 +7,6 @@ class StepsInitial extends StepsState {}
 
 class StepsUpdatedState extends StepsState{
   final int currentSteps;
-  StepsUpdatedState(this.currentSteps);
+  final List<StepModel>? list;
+  StepsUpdatedState(this.currentSteps, this.list);
 }

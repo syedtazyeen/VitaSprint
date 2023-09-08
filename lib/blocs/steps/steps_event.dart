@@ -8,3 +8,12 @@ class StepUpdateEvent extends StepsEvent {
   final int stepCount;
   StepUpdateEvent(this.stepCount);
 }
+
+class StepCountPushInHive extends StepsEvent{
+  final int stepCount;
+  StepCountPushInHive(this.stepCount);
+}
+
+class StepCountBankFetchFromHive extends StepsEvent{}
+
+class StepCountFetchFromHive extends StepsEvent{}

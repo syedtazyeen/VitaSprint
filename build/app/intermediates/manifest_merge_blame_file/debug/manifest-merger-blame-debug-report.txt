@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/syedtazyeen/Documents/VitaSprint/android/app/src/debug/AndroidManifest.xml:6:5-66
-15-->/Users/syedtazyeen/Documents/VitaSprint/android/app/src/debug/AndroidManifest.xml:6:22-64
+15-->/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/AndroidManifest.xml:4:5-67
+15-->/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/AndroidManifest.xml:4:22-64
 16    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 16-->/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/AndroidManifest.xml:3:5-78
 16-->/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/AndroidManifest.xml:3:22-76
