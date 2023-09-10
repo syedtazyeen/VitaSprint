@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:vita_sprint/widgets/hexagon_container.dart';
+import 'package:vitasprint/widgets/hexagon_container.dart';
 
 class HorizontalCard extends StatelessWidget {
   const HorizontalCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Theme.of(context).primaryColor,
-      margin: EdgeInsets.only(left: 24, right: 24, top: 24),
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.black.withOpacity(.035),
+          borderRadius: BorderRadius.circular(24)),
+      margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
+      padding: const EdgeInsets.only(top: 8,bottom: 8),
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Row(
           children: [
             HexagonContainer(text: "74"),
-            Flexible(
+            const Flexible(
               child: Wrap(
                 alignment: WrapAlignment.start,
                 crossAxisAlignment: WrapCrossAlignment.center,
@@ -26,12 +29,7 @@ class HorizontalCard extends StatelessWidget {
                   Padding(padding: EdgeInsets.all(2)),
                   Text(
                     "Based on your overall health stats, your score 74 is considered good!",
-                    style: TextStyle(fontSize: 14, color: Colors.black38),
-                  ),
-                  Padding(padding: EdgeInsets.all(2)),
-                  Text(
-                    "Read more",
-                    style: TextStyle(fontSize: 15, color: Colors.black38),
+                    style: TextStyle(fontSize: 13, color: Colors.black38),
                   ),
                 ],
               ),

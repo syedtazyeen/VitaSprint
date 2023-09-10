@@ -1,4 +1,4 @@
-name: vita_sprint
+name: vitasprint
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -34,6 +34,7 @@ dependencies:
   flutter_bloc:
   provider:
   percent_indicator:
+  fluttertoast:
   pedometer:
   http:
   hive:
@@ -41,6 +42,8 @@ dependencies:
   hive_generator:
   path_provider:
   build_runner:
+  firebase_core:
+  firebase_database:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -89,13 +92,13 @@ flutter:
     - family: Poppins
       fonts:
         - asset: fonts/Poppins-Regular.ttf
-          weight: 400
+          weight: 300
         - asset: fonts/Poppins-SemiBold.ttf
-          weight: 500
+          weight: 400
         - asset: fonts/Poppins-Bold.ttf
-          weight: 700
+          weight: 500
         - asset: fonts/Poppins-ExtraBold.ttf
-          weight: 800
+          weight: 700
   # fonts:
   #   - family: Schyler
   #     fonts:

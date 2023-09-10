@@ -15,27 +15,37 @@ class ActivityItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: Column(
-          children: [
-            Text(title,
-                style: const TextStyle(fontSize: 13, color: Colors.black38)),
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white24,
-                borderRadius: BorderRadius.all(Radius.circular(1000)),
+        child: Container(
+          //margin: EdgeInsets.all(4),
+          //padding: EdgeInsets.all(4),
+          decoration: const BoxDecoration(
+            //color: Colors.black12,
+            borderRadius: BorderRadius.all(Radius.circular(16)),
+          ),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: iconBg,
+                  borderRadius: const BorderRadius.all(Radius.circular(1000)),
+                ),
+                padding: const EdgeInsets.all(4),
+                margin: const EdgeInsets.all(4),
+                child: Icon(
+                  icon,
+                  color:iconColor,
+                  size: 20,
+                ),
               ),
-              padding: EdgeInsets.all(8),
-              margin: EdgeInsets.all(4),
-              child: Icon(
-                icon,
-                color:iconColor
-              ),
-            ),
-            Text(
-              value,
-              style: TextStyle(fontSize: 16, color: Color(0xff0c2c52)),
-            )
-          ],
-        ));
+              Text(title,
+                  style: const TextStyle(fontSize: 12, color: Colors.black38)),
+              Text(
+                value,
+                style: const TextStyle(fontSize: 14, color: Color(0xff0c2c52)),
+              )
+            ],
+          ),
+        )
+    );
   }
 }

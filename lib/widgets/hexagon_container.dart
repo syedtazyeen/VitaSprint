@@ -3,11 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class HexagonContainer extends StatelessWidget {
-
   String text;
 
   HexagonContainer({super.key, required this.text});
-
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +13,19 @@ class HexagonContainer extends StatelessWidget {
       child: Container(
         width: 64.0, // Set the desired width and height
         height: 56.0,
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: ClipPath(
           clipper: HexagonClipper(),
           child: Container(
-            color: Color(0xffFFF38C), // Set the background color of the hexagon
+            color: const Color(0xfffdd87b), // Set the background color of the hexagon
+            //0xffFFF38C
             child: Center(
               child: Text(
                 text,
-                style: TextStyle(// Set the text color
-                  fontSize: 16.0, // Set the text size
-                ),
+                style: const TextStyle(
+                    // Set the text color
+                    fontSize: 16.0 // Set the text size
+                    ),
               ),
             ),
           ),
@@ -33,7 +33,6 @@ class HexagonContainer extends StatelessWidget {
       ),
     );
   }
-
 }
 
 class HexagonClipper extends CustomClipper<Path> {

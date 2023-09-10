@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.yiverse.vitasprint.app-mergeDebugResources-9:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "com.yiverse.vitasprint.app-mergeDebugResources-13:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "/Users/syedtazyeen/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",
+                    "source": "/Users/syedtazyeen/.gradle/caches/transforms-3/cf72013d765e0f69e97cd3b9cbb09800/transformed/core-1.6.0/res/values-en-rXC/values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
