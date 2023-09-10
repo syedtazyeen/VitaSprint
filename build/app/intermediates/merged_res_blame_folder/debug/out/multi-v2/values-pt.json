@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.yiverse.vitasprint.app-mergeDebugResources-9:/values-pt/values-pt.xml",
+            "outputFile": "com.yiverse.vitasprint.app-mergeDebugResources-13:/values-pt/values-pt.xml",
             "map": [
                 {
-                    "source": "/Users/syedtazyeen/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/res/values-pt/values-pt.xml",
+                    "source": "/Users/syedtazyeen/.gradle/caches/transforms-3/cf72013d765e0f69e97cd3b9cbb09800/transformed/core-1.6.0/res/values-pt/values-pt.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "89072898653",
+    "firebase_url": "https://vitasprint-73cfd-default-rtdb.firebaseio.com",
+    "project_id": "vitasprint-73cfd",
+    "storage_bucket": "vitasprint-73cfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89072898653:android:0e1344c722e461dad173b4",
+        "android_client_info": {
+          "package_name": "com.yiverse.vitasprint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89072898653-vqqhrss3fb6g1opjticpii98mt1jqf24.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yiverse.vitasprint",
+            "certificate_hash": "06fec6174355d1c3657189f0ed1b3891b9aa336a"
+          }
+        },
+        {
+          "client_id": "89072898653-cvjn1ihtt24mudo2h7p0heotvlbai7ka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRrm2XcHkxmar1TKv46v-NDfCLJ0Ee2ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89072898653-cvjn1ihtt24mudo2h7p0heotvlbai7ka.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

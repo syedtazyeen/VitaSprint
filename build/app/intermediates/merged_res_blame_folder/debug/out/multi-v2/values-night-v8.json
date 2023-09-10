@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.yiverse.vitasprint.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.yiverse.vitasprint.app-mergeDebugResources-13:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/syedtazyeen/Documents/VitaSprint/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/syedtazyeen/Documents/GitHub/VitaSprint/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

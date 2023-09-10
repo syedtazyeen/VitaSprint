@@ -1,4 +1,9 @@
 # This is a generated file; do not edit or check into version control.
+firebase_core=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/firebase_core-2.15.1/
+firebase_core_web=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/firebase_core_web-2.7.0/
+firebase_database=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/firebase_database-10.2.5/
+firebase_database_web=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/firebase_database_web-0.2.3+5/
+fluttertoast=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/fluttertoast-8.2.2/
 path_provider=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/path_provider-2.1.1/
 path_provider_android=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/path_provider_android-2.2.0/
 path_provider_foundation=/Users/syedtazyeen/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.1/

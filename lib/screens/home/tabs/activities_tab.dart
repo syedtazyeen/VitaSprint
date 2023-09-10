@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vita_sprint/screens/home/widgets/grid_card.dart';
-import 'package:vita_sprint/utils/steps_helper.dart';
+import 'package:pedometer/pedometer.dart';
+import 'package:vitasprint/constants/app_colors.dart';
+import 'package:vitasprint/widgets/circle_progress.dart';
+
 import '../../../blocs/steps/steps_bloc.dart';
-import '../../../constants/app_colors.dart';
 import '../../../utils/step_counter.dart';
-import '../../../widgets/circle_progress.dart';
+import '../../../utils/steps_helper.dart';
 import '../widgets/activities_item.dart';
+import '../widgets/grid_card.dart';
 import '../widgets/horizontal_card.dart';
 
 class ActivitiesTab extends StatefulWidget {
@@ -19,6 +21,7 @@ class ActivitiesTab extends StatefulWidget {
 class _ActivitiesTabState extends State<ActivitiesTab> {
   final stepBloc = StepsBloc();
 
+
   @override
   void initState() {
     super.initState();
@@ -27,14 +30,17 @@ class _ActivitiesTabState extends State<ActivitiesTab> {
 
   @override
   Widget build(BuildContext context) {
+
     return BlocConsumer<StepsBloc, StepsState>(
         bloc: stepBloc,
-        listener: (context, state) {},
+        listener: (context, state) {
+          //stepBloc.stepCountBankFetchFromHive();
+        },
         builder: (context, state) {
           if (state is StepsUpdatedState) {
             return ActivitiesView(state: state);
           } else {
-            return const Center(child: Text("Something went wrong!"));
+            return  Center(child: Text("error"),);
           }
         });
   }
@@ -42,11 +48,9 @@ class _ActivitiesTabState extends State<ActivitiesTab> {
 
 class ActivitiesView extends StatelessWidget {
   final state;
-  const ActivitiesView({super.key, required this.state});
-
+  const ActivitiesView({super.key,required this.state});
 
   double calculatePercent(double s, double t) {
-    //print("percent - ${s / t}");
     if (s == null || t == null) return 0;
     if (s / t <= 1 && s / t >= 0) {
       return s / t;
@@ -60,65 +64,77 @@ class ActivitiesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      //alignment: Alignment.bottomCenter,
       children: [
         Container(
+          height: 340,
+          width: double.infinity,
           decoration: const BoxDecoration(
-            //color: AppColors.appBlue,
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Colors.white,  AppColors.appBlue], // Define your gradient colors
-            ),
-          ),
-          height: 420,
-          padding: const EdgeInsets.only(top: 64, bottom: 16),
+              //color: Color(0xffc9f44d),
+              color: AppColors.color4,
+              borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(24),
+                  bottomLeft: Radius.circular(24))),
           child: Container(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: [
-                const Text("Today's Activity"),
-                const Padding(padding: EdgeInsets.all(12)),
-                CircleProgress(
-                  title: "${state.currentSteps}",
-                  subtitle: "Steps",
-                  radius: 70.0,
-                  width: 10.0,
-                  percent: calculatePercent((state.currentSteps * 0.067 * 0.01), (7000 * 0.067 * 0.01)),
-                  progressColor: AppColors.appGreeneDark,
-                ),
-                const Padding(padding: EdgeInsets.all(12)),
-                Row(
-                  children: [
-                    ActivityItem(
-                      title: "kCal Burnt",
-                      value: ((StepsHelper().getCaloriesFromSteps(state.currentSteps)/1000).toStringAsFixed(2)),
-                      icon: Icons.whatshot,
-                      iconColor: Colors.deepOrange,
-                      iconBg: Colors.white38,
-                    ),
-                    ActivityItem(
-                      title: "Distance",
-                      value: "${(StepsHelper().getDistanceFromSteps(state.currentSteps)/1000).toStringAsFixed(2)} km",
-                      icon: Icons.directions,
-                      iconColor: Colors.brown,
-                      iconBg: Colors.white38,
-                    ),
-                    ActivityItem(
-                      title: "Time",
-                      value: "--",
-                      icon: Icons.alarm_on,
-                      iconColor: Colors.teal,
-                      iconBg: Colors.white38,
-                    ),
-                  ],
-                )
-              ],
+            //margin: EdgeInsets.only(top: 24),
+            child: CircleProgress(
+              title: "${state!.currentSteps ?? 0}",
+              subtitle: "Steps Today",
+              radius: 96.0,
+              width: 14.0,
+              percent: calculatePercent(
+                  ((state!.currentSteps ?? 0) * 0.067 * 0.01),
+                  (7000 * 0.067 * 0.01)),
+              progressColor: AppColors.color2,
             ),
           ),
         ),
+        SafeArea(
+            child: Container(
+          margin: EdgeInsets.only(top: 56),
+          child: Column(
+            children: [
+              Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.all(16),
+                  margin: EdgeInsets.only(left: 16, right: 16, top: 200),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Row(
+                    children: [
+                      ActivityItem(
+                        title: "kCal Burnt",
+                        value: ((StepsHelper()
+                                    .getCaloriesFromSteps(state!.currentSteps??0) /
+                                1000)
+                            .toStringAsFixed(2)),
+                        icon: Icons.whatshot,
+                        iconColor: Theme.of(context).primaryColor,
+                        iconBg: Colors.deepOrangeAccent,
+                      ),
+                      ActivityItem(
+                        title: "Distance",
+                        value:
+                            "${(StepsHelper().getDistanceFromSteps(state!.currentSteps??0) / 1000).toStringAsFixed(2)} km",
+                        icon: Icons.directions,
+                        iconColor: Theme.of(context).primaryColor,
+                        iconBg: Colors.blueAccent,
+                      ),
+                      ActivityItem(
+                        title: "Time",
+                        value: "--",
+                        icon: Icons.alarm,
+                        iconColor: Theme.of(context).primaryColor,
+                        iconBg: Color(0xff04ca49),
+                      ),
+                    ],
+                  ))
+            ],
+          ),
+        )),
         Container(
             decoration: const BoxDecoration(
-              color: Colors.transparent,
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(16),
                 topLeft: Radius.circular(16),
@@ -129,14 +145,14 @@ class ActivitiesView extends StatelessWidget {
                 children: [
                   Container(
                     decoration: const BoxDecoration(
-                      color: Colors.transparent,
-                    ),
-                    height: 400,
+                        //color: Color(0x28FF6E40),
+                        ),
+                    height: 450,
                   ),
                   Container(
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: const BorderRadius.only(
+                    decoration: const BoxDecoration(
+                      color: AppColors.color3,
+                      borderRadius: BorderRadius.only(
                         topRight: Radius.circular(24),
                         topLeft: Radius.circular(24),
                       ),
@@ -144,10 +160,31 @@ class ActivitiesView extends StatelessWidget {
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Center(
+                            child: Container(
+                              margin: EdgeInsets.all(8),
+                              height: 4,
+                              width: 56,
+                              decoration: BoxDecoration(
+                                  color: Theme.of(context).primaryColorLight,
+                                  borderRadius: BorderRadius.circular(32)),
+                            ),
+                          ),
                           HorizontalCard(),
                           Container(
-                              padding: const EdgeInsets.only(top: 24, left: 24),
-                              child: const Text("Metrics", style: TextStyle(fontWeight: FontWeight.w600))
+                            padding: const EdgeInsets.only(top: 24, left: 24,right: 24),
+                            child: const Row(
+                              children: [
+                                Expanded(
+                                  child: Text("Metrics",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600)),
+                                ),
+                                //Text("Today")
+                                DropdownDemo()
+
+                              ],
+                            ),
                           ),
                           GridView.count(
                             crossAxisCount: 2,
@@ -156,8 +193,42 @@ class ActivitiesView extends StatelessWidget {
                             shrinkWrap: true,
                             padding: const EdgeInsets.all(20),
                             physics: const NeverScrollableScrollPhysics(),
-                            children: [GridCard(), GridCard(), GridCard()],
-                          )
+                            children: [
+                              GridCard(
+                                name: "Step Count",
+                                value: state.currentSteps.toString(),
+                                unit: "Steps",
+                                icon: Icons.directions_run,
+                                iconBg: AppColors.color4,
+                                iconColor: Colors.white,
+                              ),
+                              GridCard(
+                                name: "Distance",
+                                value: (StepsHelper().getDistanceFromSteps(state!.currentSteps??0) / 1000).toStringAsFixed(2),
+                                unit: "Kilometers",
+                                icon: Icons.directions,
+                                iconBg: Colors.blueAccent,
+                                iconColor: Colors.white,
+                              ),
+                              GridCard(
+                                name: "Cal Burnt",
+                                value: ((StepsHelper().getCaloriesFromSteps(state!.currentSteps??0) / 1000).toStringAsFixed(2)),
+                                unit: "kCal",
+                                icon: Icons.whatshot,
+                                iconBg: Colors.deepOrangeAccent,
+                                iconColor: Colors.white,
+                              ),
+                              GridCard(
+                                name: "Duration",
+                                value: "--",
+                                unit: "mins",
+                                icon: Icons.alarm,
+                                iconBg: Colors.indigo,
+                                iconColor: Colors.white,
+                              ),
+                            ],
+                          ),
+                          Padding(padding: EdgeInsets.all(40))
                         ]),
                   ),
                 ],
@@ -166,4 +237,96 @@ class ActivitiesView extends StatelessWidget {
       ],
     );
   }
+}
+
+
+class DropdownDemo extends StatefulWidget {
+  const DropdownDemo({super.key});
+
+  @override
+  _DropdownDemoState createState() => _DropdownDemoState();
+}
+
+class _DropdownDemoState extends State<DropdownDemo> {
+  List<String> items = ['Today', 'This Week', 'This Month'];
+  String selectedItem = 'Today';
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CustomDropdownButton(
+          value: selectedItem,
+          onChanged: (String? newValue) {
+            setState(() {
+              selectedItem = newValue!;
+            });
+          },
+          items: items.map<CustomDropdownMenuItem<String>>((String item) {
+            return CustomDropdownMenuItem<String>(
+              value: item,
+              child: Text(
+                item,
+                style: TextStyle(fontSize: 13.0, color: Colors.white),
+              ),
+            );
+          }).toList(),
+        )
+      ],
+    );
+  }
+}
+
+class CustomDropdownButton<T> extends StatelessWidget {
+  final T value;
+  final ValueChanged<T?> onChanged;
+  final List<CustomDropdownMenuItem<T>> items;
+
+  CustomDropdownButton({
+    required this.value,
+    required this.onChanged,
+    required this.items,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16.0), // Adjust the radius here
+        color: AppColors.color4,
+      ),
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          canvasColor: AppColors.color4, // Background color of the dropdown menu
+          buttonTheme: ButtonTheme.of(context).copyWith(
+            alignedDropdown: true,
+            padding: EdgeInsets.all(4),
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            highlightColor: Colors.black,
+            splashColor: Colors.white,
+            minWidth: 0,
+            height: 0,
+          ),
+        ),
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton<T>(
+            value: value,
+            onChanged: onChanged,
+            items: items,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CustomDropdownMenuItem<T> extends DropdownMenuItem<T> {
+  CustomDropdownMenuItem({
+    required T value,
+    required Widget child,
+  }) : super(
+    value: value,
+    child: child,
+  );
 }

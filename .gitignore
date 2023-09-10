@@ -1,0 +1,4 @@
+build/
+# ignores all .apk files
+.apk
+*.apk

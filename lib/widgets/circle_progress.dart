@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:vita_sprint/constants/app_colors.dart';
+import 'package:vitasprint/constants/app_colors.dart';
 
 class CircleProgress extends StatefulWidget {
   final String title;
@@ -43,39 +43,43 @@ class _CircleProgressState extends State<CircleProgress> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      alignment: Alignment.center,
+     alignment: Alignment.center,
       children: [
-        Center(
-          child: CircularPercentIndicator(
-            radius: widget.radius,
-            lineWidth: widget.width,
-            animation: true,
-            animationDuration: animDuration,
-            startAngle: 180,
-            percent: widget.percent,
-            circularStrokeCap: CircularStrokeCap.round,
-            progressColor: widget.progressColor,
-            backgroundColor: Colors.white38,
-          ),
-        ),
         Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               widget.title,
               style: const TextStyle(
-                fontSize: 22.0,
-                color: AppColors.appGreeneDark,
+                fontSize: 24.0,
+                color: Colors.white,
               ),
             ),
-            Text(
-              widget.subtitle,
-              style: const TextStyle(
-                fontSize: 14.0,
-                color: Colors.black38,
+            Container(
+              //margin: EdgeInsets.only(top: 40),
+              child:  Text(
+                widget.subtitle,
+                style: const TextStyle(
+                  fontSize: 13.0,
+                  color: Colors.white60,
+                ),
               ),
             ),
           ],
         ),
+        CircularPercentIndicator(
+          radius: widget.radius,
+          lineWidth: widget.width,
+          animation: true,
+          animationDuration: animDuration,
+          startAngle: 180,
+          //arcType: ArcType.FULL,
+          percent: .7,
+          circularStrokeCap: CircularStrokeCap.round,
+          progressColor: widget.progressColor,
+          backgroundColor: Colors.white24,
+        ),
+
       ],
     );
   }
