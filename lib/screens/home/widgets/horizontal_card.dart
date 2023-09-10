@@ -10,10 +10,10 @@ class HorizontalCard extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.black.withOpacity(.035),
           borderRadius: BorderRadius.circular(24)),
-      margin: EdgeInsets.only(left: 24, right: 24, top: 24),
-      padding: EdgeInsets.only(top: 8,bottom: 8),
+      margin: const EdgeInsets.only(left: 24, right: 24, top: 24),
+      padding: const EdgeInsets.only(top: 8,bottom: 8),
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: Row(
           children: [
             HexagonContainer(text: "74"),

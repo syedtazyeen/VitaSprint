@@ -13,11 +13,11 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/syedtazyeen/Documents/GitHub/VitaSprint/android/app/src/main/AndroidManifest.xml:4:5-67
-15-->/Users/syedtazyeen/Documents/GitHub/VitaSprint/android/app/src/main/AndroidManifest.xml:4:22-64
+15-->/Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/android/app/src/main/AndroidManifest.xml:4:5-67
+15-->/Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/android/app/src/main/AndroidManifest.xml:4:22-64
 16    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-16-->/Users/syedtazyeen/Documents/GitHub/VitaSprint/android/app/src/main/AndroidManifest.xml:3:5-78
-16-->/Users/syedtazyeen/Documents/GitHub/VitaSprint/android/app/src/main/AndroidManifest.xml:3:22-76
+16-->/Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/android/app/src/main/AndroidManifest.xml:3:5-78
+16-->/Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/android/app/src/main/AndroidManifest.xml:3:22-76
 17    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 18-->[com.google.firebase:firebase-database:20.2.2] /Users/syedtazyeen/.gradle/caches/transforms-3/7e9721fb51cbc5d8f891e8418dc977ea/transformed/jetified-firebase-database-20.2.2/AndroidManifest.xml:24:5-79
@@ -65,25 +65,25 @@
 58            android:value="2" />
 59
 60        <service
-60-->[:firebase_database] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+60-->[:firebase_database] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 61            android:name="com.google.firebase.components.ComponentDiscoveryService"
-61-->[:firebase_database] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+61-->[:firebase_database] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
 62            android:directBootAware="true"
 62-->[com.google.firebase:firebase-common:20.3.3] /Users/syedtazyeen/.gradle/caches/transforms-3/97ba536cb97715cf3a6afeff735547bd/transformed/jetified-firebase-common-20.3.3/AndroidManifest.xml:34:13-43
 63            android:exported="false" >
 63-->[com.google.firebase:firebase-database:20.2.2] /Users/syedtazyeen/.gradle/caches/transforms-3/7e9721fb51cbc5d8f891e8418dc977ea/transformed/jetified-firebase-database-20.2.2/AndroidManifest.xml:30:13-37
 64            <meta-data
-64-->[:firebase_database] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+64-->[:firebase_database] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 65                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
-65-->[:firebase_database] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-127
+65-->[:firebase_database] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-127
 66                android:value="com.google.firebase.components.ComponentRegistrar" />
-66-->[:firebase_database] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+66-->[:firebase_database] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_database/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 67            <meta-data
-67-->[:firebase_core] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+67-->[:firebase_core] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 68                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-68-->[:firebase_core] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+68-->[:firebase_core] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 69                android:value="com.google.firebase.components.ComponentRegistrar" />
-69-->[:firebase_core] /Users/syedtazyeen/Documents/GitHub/VitaSprint/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+69-->[:firebase_core] /Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 70            <meta-data
 70-->[com.google.firebase:firebase-database:20.2.2] /Users/syedtazyeen/.gradle/caches/transforms-3/7e9721fb51cbc5d8f891e8418dc977ea/transformed/jetified-firebase-database-20.2.2/AndroidManifest.xml:31:13-33:85
 71                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"

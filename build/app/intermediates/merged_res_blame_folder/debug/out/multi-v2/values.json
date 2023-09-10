@@ -59,22 +59,20 @@
                     }
                 },
                 {
-                    "source": "/Users/syedtazyeen/Documents/GitHub/VitaSprint/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/build/app/generated/res/google-services/debug/values/values.xml",
                     "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,198,322,403,507,615,735,835",
+                        "endColumns": "142,123,80,103,107,119,99,76",
+                        "endOffsets": "193,317,398,502,610,730,830,907"
                     },
                     "to": {
-                        "startLines": "128,132",
-                        "startColumns": "4,4",
-                        "startOffsets": "9441,9622",
-                        "endLines": "131,134",
-                        "endColumns": "12,12",
-                        "endOffsets": "9617,9786"
+                        "startLines": "119,120,121,122,123,124,125,126",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "8513,8656,8780,8861,8965,9073,9193,9293",
+                        "endColumns": "142,123,80,103,107,119,99,76",
+                        "endOffsets": "8651,8775,8856,8960,9068,9188,9288,9365"
                     }
                 },
                 {
@@ -97,20 +95,22 @@
                     }
                 },
                 {
-                    "source": "/Users/syedtazyeen/Documents/GitHub/VitaSprint/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/Users/syedtazyeen/Documents/Flutter-Github/VitaSprint/android/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,198,322,403,507,615,735,835",
-                        "endColumns": "142,123,80,103,107,119,99,76",
-                        "endOffsets": "193,317,398,502,610,730,830,907"
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
                     },
                     "to": {
-                        "startLines": "119,120,121,122,123,124,125,126",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "8513,8656,8780,8861,8965,9073,9193,9293",
-                        "endColumns": "142,123,80,103,107,119,99,76",
-                        "endOffsets": "8651,8775,8856,8960,9068,9188,9288,9365"
+                        "startLines": "128,132",
+                        "startColumns": "4,4",
+                        "startOffsets": "9441,9622",
+                        "endLines": "131,134",
+                        "endColumns": "12,12",
+                        "endOffsets": "9617,9786"
                     }
                 }
             ]

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vitasprint/constants/app_colors.dart';
 
 class RecipeItem extends StatelessWidget {
   String name, des,time;
@@ -9,8 +8,8 @@ class RecipeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
-      padding: EdgeInsets.all(12),
+      margin: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
           color: Colors.black.withOpacity(.05),
         borderRadius: BorderRadius.circular(24)
@@ -19,7 +18,7 @@ class RecipeItem extends StatelessWidget {
         children: [
           Container(
             color: Colors.transparent,
-            padding: EdgeInsets.all(4),
+            padding: const EdgeInsets.all(4),
             child: Image.network(
               'https://firebasestorage.googleapis.com/v0/b/vitasprint-73cfd.appspot.com/o/recipes%2FPngItem_1522450.png?alt=media&token=78938bd7-ed5d-4ce0-b58e-9e682437e388',
               height: 120.0, // Set the height of the image
@@ -28,7 +27,7 @@ class RecipeItem extends StatelessWidget {
           ),
           Flexible(
             child: Container(
-              margin: EdgeInsets.only(top: 8, bottom: 8,left: 12),
+              margin: const EdgeInsets.only(top: 8, bottom: 8,left: 12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -40,7 +39,7 @@ class RecipeItem extends StatelessWidget {
                         style: TextStyle(fontSize: 13, color: Colors.brown),
                       ),),
                       Container(
-                        margin: EdgeInsets.only(top: 4,right: 16),
+                        margin: const EdgeInsets.only(top: 4,right: 16),
                         child: const Row(
                           children: [
                             Text(
@@ -56,7 +55,7 @@ class RecipeItem extends StatelessWidget {
                   ),
                   Text(
                     name,
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
                   ),
                   const Padding(padding: EdgeInsets.all(2)),
                   Row(
@@ -88,13 +87,13 @@ class RowItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 4,right: 16),
+      margin: const EdgeInsets.only(top: 4,right: 16),
       child: Column(
         children: [
           Icon(icon, color: Colors.black54,size: 18,),
           Text(
             value,
-            style: TextStyle(fontSize: 11, color: Color(0xff0c2c52)),
+            style: const TextStyle(fontSize: 11, color: Color(0xff0c2c52)),
           )
         ],
       ),

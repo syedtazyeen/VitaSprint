@@ -24,34 +24,34 @@ class GridCard extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: iconBg,
-                  borderRadius: BorderRadius.all(Radius.circular(1000)),
+                  borderRadius: const BorderRadius.all(Radius.circular(1000)),
                 ),
-                padding: EdgeInsets.all(4),
-                margin: EdgeInsets.only(right: 4),
+                padding: const EdgeInsets.all(4),
+                margin: const EdgeInsets.only(right: 4),
                 child: Icon(
                   icon,
                   color: iconColor,
                   size: 20,
                 ),
               ),
-              Expanded(child: Text("")),
+              const Expanded(child: Text("")),
               Text(
                 name,
-                style: TextStyle(fontSize: 13),
+                style: const TextStyle(fontSize: 13),
               )
             ],
           ),
-          Expanded(child: Text("")),
+          const Expanded(child: Text("")),
           Row(
             children: [
               Text(
                 value,
-                style: TextStyle(fontSize: 22),
+                style: const TextStyle(fontSize: 22),
               ),
-              Padding(padding: EdgeInsets.all(4)),
+              const Padding(padding: EdgeInsets.all(4)),
               Text(
                 unit,
-                style: TextStyle(fontSize: 13, color: Colors.black38),
+                style: const TextStyle(fontSize: 13, color: Colors.black38),
               )
             ],
           )

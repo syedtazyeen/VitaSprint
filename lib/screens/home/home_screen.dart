@@ -1,9 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:vitasprint/constants/app_colors.dart';
 import 'package:vitasprint/screens/home/tabs/activities_tab.dart';
-import 'package:vitasprint/screens/home/tabs/explore/explore_tab.dart';
+import 'package:vitasprint/screens/home/tabs/explore_tab.dart';
 import 'package:vitasprint/screens/home/tabs/settings_tab.dart';
 import 'package:vitasprint/widgets/vita_bottom_navigation_bar.dart';
 import '../../providers/bottom_navigation_provider.dart';
@@ -22,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             color: Theme.of(context).scaffoldBackgroundColor,
             child: IndexedStack(
               index: navigationProvider.currentIndex,
-              children: <Widget>[
+              children: const <Widget>[
                 ActivitiesTab(),
                 ExploreTab(),
                 SettingsTab()

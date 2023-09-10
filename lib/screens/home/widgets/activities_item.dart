@@ -27,10 +27,10 @@ class ActivityItem extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   color: iconBg,
-                  borderRadius: BorderRadius.all(Radius.circular(1000)),
+                  borderRadius: const BorderRadius.all(Radius.circular(1000)),
                 ),
-                padding: EdgeInsets.all(4),
-                margin: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
+                margin: const EdgeInsets.all(4),
                 child: Icon(
                   icon,
                   color:iconColor,
@@ -41,7 +41,7 @@ class ActivityItem extends StatelessWidget {
                   style: const TextStyle(fontSize: 12, color: Colors.black38)),
               Text(
                 value,
-                style: TextStyle(fontSize: 14, color: Color(0xff0c2c52)),
+                style: const TextStyle(fontSize: 14, color: Color(0xff0c2c52)),
               )
             ],
           ),
